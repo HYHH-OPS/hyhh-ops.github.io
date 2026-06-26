@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yuhaohang He — Undergraduate researcher in trustworthy medical AI, medical image computing, and AI for Science." />
+  <meta name="theme-color" content="#f6f7f9" />
+  <title>Yuhaohang He | Academic Homepage</title>
+
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --paper: #ffffff;
+      --paper-soft: #fbfcfd;
+      --text: #172033;
+      --muted: #667085;
+      --line: #e5e7eb;
+      --line-dark: #d6dbe3;
+      --accent: #2446a8;
+      --accent-soft: #edf2ff;
+      --accent-2: #0f766e;
+      --shadow: 0 14px 45px rgba(23, 32, 51, 0.08);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        linear-gradient(rgba(36, 70, 168, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(36, 70, 168, 0.025) 1px, transparent 1px),
+        var(--bg);
+      background-size: 32px 32px;
+      font-family:
+        Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(246, 247, 249, 0.92);
+      border-bottom: 1px solid rgba(214, 219, 227, 0.9);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px;
+      border: 1px solid var(--line-dark);
+      border-radius: 999px;
+      background: var(--paper);
+    }
+
+    .lang-btn {
+      min-width: 44px;
+      padding: 7px 11px;
+      border: 0;
+      border-radius: 999px;
+      color: var(--muted);
+      background: transparent;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .lang-btn.active {
+      color: #fff;
+      background: var(--accent);
+    }
+
+    main {
+      padding: 56px 0 84px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.55fr 0.75fr;
+      gap: 46px;
+      align-items: stretch;
+      padding: 52px;
+      border: 1px solid var(--line-dark);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .kicker {
+      width: fit-content;
+      margin-bottom: 16px;
+      padding: 6px 10px;
+      border: 1px solid #d7e0ff;
+      border-radius: 7px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(46px, 6.3vw, 72px);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+    }
+
+    .role {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 19px;
+      font-weight: 600;
+    }
+
+    .summary {
+      max-width: 760px;
+      margin: 24px 0 0;
+      color: #344054;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 17px;
+      border: 1px solid var(--line-dark);
+      border-radius: 10px;
+      color: var(--text);
+      background: var(--paper);
+      font-size: 14px;
+      font-weight: 750;
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: #b9c4da;
+      box-shadow: 0 8px 20px rgba(23, 32, 51, 0.08);
+    }
+
+    .btn.primary {
+      color: #fff;
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+
+    .profile-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--paper-soft);
+    }
+
+    .monogram {
+      display: grid;
+      place-items: center;
+      width: 104px;
+      height: 104px;
+      border: 1px solid #dce3f5;
+      border-radius: 22px;
+      color: #fff;
+      background: linear-gradient(135deg, #2446a8, #0f766e);
+      box-shadow: 0 12px 28px rgba(36, 70, 168, 0.18);
+      font-size: 30px;
+      font-weight: 850;
+      letter-spacing: -0.04em;
+    }
+
+    .profile-meta {
+      margin-top: 24px;
+    }
+
+    .meta-block + .meta-block {
+      margin-top: 17px;
+    }
+
+    .meta-label {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .meta-value {
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    section {
+      scroll-margin-top: 90px;
+      margin-top: 64px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+    }
+
+    .section-subtitle {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .paper {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 8px 25px rgba(23, 32, 51, 0.045);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+    }
+
+    .principles {
+      display: grid;
+      gap: 12px;
+    }
+
+    .principle {
+      padding: 17px 18px;
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      background: var(--paper-soft);
+    }
+
+    .principle strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .principle span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .research-card {
+      position: relative;
+      padding: 27px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--paper);
+      box-shadow: 0 7px 22px rgba(23, 32, 51, 0.04);
+    }
+
+    .research-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent);
+    }
+
+    .research-card:nth-child(2)::before,
+    .research-card:nth-child(4)::before {
+      background: var(--accent-2);
+    }
+
+    .research-card h3 {
+      margin: 0 0 9px;
+      font-size: 18px;
+      letter-spacing: -0.015em;
+    }
+
+    .research-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .work-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .work-item {
+      padding: 25px 27px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--paper);
+      box-shadow: 0 7px 22px rgba(23, 32, 51, 0.04);
+    }
+
+    .work-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .work-title {
+      max-width: 820px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .year {
+      flex: 0 0 auto;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .authors,
+    .venue,
+    .note {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .venue {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 13px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      border: 1px solid #e1e6ef;
+      border-radius: 7px;
+      color: #475467;
+      background: #f8fafc;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .academic-note {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .quote {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--paper);
+    }
+
+    .quote-mark {
+      color: var(--accent);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .quote p {
+      margin: 10px 0 0;
+      color: #344054;
+      font-size: 16px;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 34px;
+      border: 1px solid #d6def1;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #f8faff, #f4fbfa);
+      box-shadow: 0 8px 26px rgba(23, 32, 51, 0.05);
+    }
+
+    .contact p {
+      max-width: 720px;
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 34px 0 44px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    [data-lang] {
+      display: none;
+    }
+
+    [data-lang].show {
+      display: initial;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 38px 28px;
+      }
+
+      .profile-panel {
+        max-width: 520px;
+      }
+
+      .about-grid,
+      .academic-note,
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .section-subtitle {
+        text-align: left;
+      }
+
+      .contact {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 660px) {
+      .container {
+        width: min(var(--max), calc(100% - 24px));
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      main {
+        padding-top: 26px;
+      }
+
+      .hero {
+        padding: 30px 22px;
+        border-radius: 18px;
+      }
+
+      h1 {
+        font-size: 47px;
+      }
+
+      .work-top {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .contact {
+        padding: 26px;
+      }
+    }
+
+    @media print {
+      .topbar,
+      .lang-switch {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+      }
+
+      main {
+        padding-top: 0;
+      }
+
+      .hero,
+      .paper,
+      .research-card,
+      .work-item,
+      .quote,
+      .contact {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#top">Yuhaohang He</a>
+
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#about">
+            <span data-lang="en">About</span>
+            <span data-lang="zh">关于我</span>
+          </a>
+          <a href="#research">
+            <span data-lang="en">Research</span>
+            <span data-lang="zh">研究方向</span>
+          </a>
+          <a href="#publications">
+            <span data-lang="en">Publications</span>
+            <span data-lang="zh">论文成果</span>
+          </a>
+          <a href="#patent">
+            <span data-lang="en">Patent</span>
+            <span data-lang="zh">发明专利</span>
+          </a>
+          <a href="#contact">
+            <span data-lang="en">Contact</span>
+            <span data-lang="zh">联系方式</span>
+          </a>
+        </div>
+
+        <div class="lang-switch" aria-label="Language switch">
+          <button class="lang-btn active" type="button" data-switch="en">EN</button>
+          <button class="lang-btn" type="button" data-switch="zh">中文</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero" style="margin-top:0;">
+      <div class="hero-main">
+        <div class="kicker">
+          <span data-lang="en">Trustworthy Medical AI · AI for Science</span>
+          <span data-lang="zh">可信医学人工智能 · 科学智能</span>
+        </div>
+
+        <h1>Yuhaohang He</h1>
+
+        <div class="role">
+          <span data-lang="en">Undergraduate Researcher in Computer Science · Sichuan Agricultural University</span>
+          <span data-lang="zh">计算机科学本科生科研者 · 四川农业大学</span>
+        </div>
+
+        <p class="summary">
+          <span data-lang="en">
+            I develop reliable, auditable, and clinically meaningful learning methods
+            for medical imaging. My current interests include synthetic-data quality
+            control, uncertainty calibration, medical image segmentation, multimodal
+            medical intelligence, and out-of-distribution evaluation.
+          </span>
+          <span data-lang="zh">
+            我关注医学影像中的可靠、可审计与具有临床意义的学习方法，当前研究兴趣包括
+            合成数据质量控制、不确定性校准、医学图像分割、医学多模态智能与分布外评估。
+          </span>
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary"
+             href="https://scholar.google.com/citations?hl=zh-CN&user=lrENhFgAAAAJ"
+             target="_blank" rel="noopener noreferrer">
+            Google Scholar
+          </a>
+
+          <a class="btn"
+             href="https://github.com/HYHH-OPS"
+             target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+
+          <a class="btn" href="mailto:202406407@stu.sicau.edu.cn">
+            <span data-lang="en">Email</span>
+            <span data-lang="zh">邮件联系</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="profile-panel" aria-label="Profile summary">
+        <div>
+          <div class="monogram" aria-hidden="true">YH</div>
+
+          <div class="profile-meta">
+            <div class="meta-block">
+              <div class="meta-label">
+                <span data-lang="en">Primary focus</span>
+                <span data-lang="zh">核心方向</span>
+              </div>
+              <div class="meta-value">
+                <span data-lang="en">Trustworthy Medical AI</span>
+                <span data-lang="zh">可信医学人工智能</span>
+              </div>
+            </div>
+
+            <div class="meta-block">
+              <div class="meta-label">
+                <span data-lang="en">Research modes</span>
+                <span data-lang="zh">研究范式</span>
+              </div>
+              <div class="meta-value">
+                <span data-lang="en">Method design · Experimental auditing · Reproducibility</span>
+                <span data-lang="zh">方法设计 · 实验审计 · 可复现研究</span>
+              </div>
+            </div>
+
+            <div class="meta-block">
+              <div class="meta-label">
+                <span data-lang="en">Institution</span>
+                <span data-lang="zh">所在机构</span>
+              </div>
+              <div class="meta-value">
+                <span data-lang="en">Sichuan Agricultural University</span>
+                <span data-lang="zh">四川农业大学</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <div class="section-head">
+        <h2>
+          <span data-lang="en">Research Profile</span>
+          <span data-lang="zh">科研概况</span>
+        </h2>
+
+        <div class="section-subtitle">
+          <span data-lang="en">A research identity centred on evidence, reliability, and real-world validity.</span>
+          <span data-lang="zh">以证据、可靠性与现实有效性为核心的研究取向。</span>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="paper">
+          <p style="margin:0;">
+            <span data-lang="en">
+              I am an undergraduate researcher in computer science at Sichuan Agricultural
+              University. Rather than treating benchmark improvement as the final goal,
+              I am interested in whether a model is statistically reliable, clinically
+              meaningful, robust under distribution shifts, and supported by reproducible
+              evidence. My work spans medical image analysis, multimodal medical learning,
+              and broader AI-for-Science problems.
+            </span>
+
+            <span data-lang="zh">
+              我是四川农业大学计算机科学方向的本科生科研者。相比只追求基准指标提升，
+              我更关注模型是否具备统计可靠性、临床意义、分布偏移下的稳健性，以及是否
+              能够由可复现证据支持。我的研究覆盖医学图像分析、医学多模态学习，并延伸至
+              更广泛的科学智能问题。
+            </span>
+          </p>
+        </div>
+
+        <div class="principles">
+          <div class="principle">
+            <strong>
+              <span data-lang="en">Evidence before claims</span>
+              <span data-lang="zh">证据先于结论</span>
+            </strong>
+            <span data-lang="en">Conclusions should remain within what the experiments truly support.</span>
+            <span data-lang="zh">研究结论应严格限定在实验真正支持的范围内。</span>
+          </div>
+
+          <div class="principle">
+            <strong>
+              <span data-lang="en">Reliability before scale</span>
+              <span data-lang="zh">可靠性先于规模</span>
+            </strong>
+            <span data-lang="en">A smaller but auditable system is often more valuable than an opaque larger one.</span>
+            <span data-lang="zh">一个规模较小但可审计的系统，往往比不可解释的大系统更有价值。</span>
+          </div>
+
+          <div class="principle">
+            <strong>
+              <span data-lang="en">Mechanism before packaging</span>
+              <span data-lang="zh">机制先于包装</span>
+            </strong>
+            <span data-lang="en">Method design should be connected to the structure of the problem and domain.</span>
+            <span data-lang="zh">方法设计应与问题本身及领域机制建立直接联系。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-head">
+        <h2>
+          <span data-lang="en">Research Directions</span>
+          <span data-lang="zh">研究方向</span>
+        </h2>
+
+        <div class="section-subtitle">
+          <span data-lang="en">A focused medical-AI core, with interdisciplinary extensions into AI for Science and embodied intelligence.</span>
+          <span data-lang="zh">以医学人工智能为主线，并向科学智能与具身智能延伸。</span>
+        </div>
+      </div>
+
+      <div class="research-grid">
+        <article class="research-card">
+          <h3>
+            <span data-lang="en">Trustworthy Medical Image Analysis</span>
+            <span data-lang="zh">可信医学图像分析</span>
+          </h3>
+          <p>
+            <span data-lang="en">
+              Reliability, uncertainty estimation, calibration, robustness,
+              out-of-distribution evaluation, and clinically meaningful validation.
+            </span>
+            <span data-lang="zh">
+              关注可靠性、不确定性估计、校准、稳健性、分布外评估与具有临床意义的验证。
+            </span>
+          </p>
+        </article>
+
+        <article class="research-card">
+          <h3>
+            <span data-lang="en">Synthetic Medical Data & Quality Control</span>
+            <span data-lang="zh">医学合成数据与质量控制</span>
+          </h3>
+          <p>
+            <span data-lang="en">
+              Validation-locked evaluation, data leakage auditing, safe augmentation,
+              and anatomy- or physics-aware generation.
+            </span>
+            <span data-lang="zh">
+              关注验证锁定评估、数据泄漏审计、安全数据增强，以及解剖或物理约束生成。
+            </span>
+          </p>
+        </article>
+
+        <article class="research-card">
+          <h3>
+            <span data-lang="en">Medical Image Segmentation</span>
+            <span data-lang="zh">医学图像分割</span>
+          </h3>
+          <p>
+            <span data-lang="en">
+              Small-sample learning, annotation-efficient methods, boundary modelling,
+              and cross-domain generalization.
+            </span>
+            <span data-lang="zh">
+              关注小样本学习、低标注学习、边界建模与跨域泛化。
+            </span>
+          </p>
+        </article>
+
+        <article class="research-card">
+          <h3>
+            <span data-lang="en">Multimodal Medical Intelligence</span>
+            <span data-lang="zh">医学多模态智能</span>
+          </h3>
+          <p>
+            <span data-lang="en">
+              Medical visual question answering, image–text learning,
+              clinical report generation, and calibrated multimodal reasoning.
+            </span>
+            <span data-lang="zh">
+              关注医学视觉问答、图文学习、临床报告生成与经过校准的多模态推理。
+            </span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-head">
+        <h2>
+          <span data-lang="en">Selected Publications</span>
+          <span data-lang="zh">代表性论文</span>
+        </h2>
+
+        <div class="section-subtitle">
+          <span data-lang="en">For the complete and updated record, please visit Google Scholar.</span>
+          <span data-lang="zh">完整且持续更新的成果列表请见 Google Scholar。</span>
+        </div>
+      </div>
+
+      <div class="work-list">
+        <article class="work-item">
+          <div class="work-top">
+            <div class="work-title">
+              Validation-Locked Quality Control for Synthetic Augmentation in
+              Small-Sample 3D CT Lesion Segmentation: A Lesion-Level Paired Audit Study
+            </div>
+            <div class="year">2026</div>
+          </div>
+
+          <div class="authors">
+            <strong>Yuhaohang He</strong>, Yujie Yao, Yaoxue Xu, Qinzhi Li
+          </div>
+
+          <div class="venue">SSRN Electronic Journal</div>
+
+          <div class="note">
+            <span data-lang="en">Focus: lesion-level audit, synthetic augmentation, and reliability-oriented evaluation.</span>
+            <span data-lang="zh">关注病灶级审计、合成增强与面向可靠性的评估。</span>
+          </div>
+
+          <div class="tags">
+            <span class="tag">3D CT</span>
+            <span class="tag">Synthetic Data</span>
+            <span class="tag">Quality Control</span>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-top">
+            <div class="work-title">
+              Scene Graph-Guided Uncertainty Decomposition Improves Confidence
+              Calibration in Surgical Visual Question Answering
+            </div>
+            <div class="year">2026</div>
+          </div>
+
+          <div class="authors">
+            Jing Song, Yujie Xu, et al., <strong>Yuhaohang He</strong>, et al.
+          </div>
+
+          <div class="venue">Frontiers in Medicine</div>
+
+          <div class="note">
+            <span data-lang="en">Focus: scene-graph reasoning, uncertainty decomposition, and calibration in surgical VQA.</span>
+            <span data-lang="zh">关注场景图推理、不确定性分解与手术视觉问答中的置信度校准。</span>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Surgical VQA</span>
+            <span class="tag">Calibration</span>
+            <span class="tag">Multimodal AI</span>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-top">
+            <div class="work-title">
+              RABC-Net: Reliability-Aware Annotation-Free Skin Lesion Segmentation
+              for Low-Resource Dermoscopy
+            </div>
+            <div class="year">2026</div>
+          </div>
+
+          <div class="authors">
+            Yujie Yao, <strong>Yuhaohang He</strong>, et al.
+          </div>
+
+          <div class="venue">arXiv preprint</div>
+
+          <div class="note">
+            <span data-lang="en">Focus: annotation-free segmentation and reliability-aware learning in low-resource dermoscopy.</span>
+            <span data-lang="zh">关注低资源皮肤镜场景中的无标注分割与可靠性建模。</span>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Dermoscopy</span>
+            <span class="tag">Segmentation</span>
+            <span class="tag">Low-Resource Learning</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="patent">
+      <div class="section-head">
+        <h2>
+          <span data-lang="en">Authorized Invention Patent</span>
+          <span data-lang="zh">授权发明专利</span>
+        </h2>
+
+        <div class="section-subtitle">
+          <span data-lang="en">First inventor on a multimodal medical-report-generation patent.</span>
+          <span data-lang="zh">多模态医学病例报告生成方向第一发明人。</span>
+        </div>
+      </div>
+
+      <article class="work-item">
+        <div class="work-top">
+          <div class="work-title">
+            基于多源数据的多模态融合处理方法、病例报告生成方法及系统
+          </div>
+          <div class="year">2026</div>
+        </div>
+
+        <div class="authors">
+          <strong>
+            <span data-lang="en">First inventor: Yuhaohang He</span>
+            <span data-lang="zh">第一发明人：何宇浩航</span>
+          </strong>
+        </div>
+
+        <div class="venue">
+          <span data-lang="en">Chinese Invention Patent · CN121839160B</span>
+          <span data-lang="zh">中国授权发明专利 · CN121839160B</span>
+        </div>
+
+        <div class="tags">
+          <span class="tag">Multimodal Data</span>
+          <span class="tag">Medical Report Generation</span>
+          <span class="tag">CT</span>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>
+          <span data-lang="en">Research Perspective</span>
+          <span data-lang="zh">科研理念</span>
+        </h2>
+
+        <div class="section-subtitle">
+          <span data-lang="en">What I hope to contribute through research.</span>
+          <span data-lang="zh">我希望通过科研持续回答的问题。</span>
+        </div>
+      </div>
+
+      <div class="academic-note">
+        <div class="quote">
+          <div class="quote-mark">“</div>
+          <p>
+            <span data-lang="en">
+              A useful model should not only perform well; it should also reveal
+              when it may fail, why its evidence is credible, and whether its
+              conclusions remain valid outside the benchmark.
+            </span>
+            <span data-lang="zh">
+              一个真正有价值的模型，不仅要表现良好，还应说明它何时可能失败、
+              证据为何可信，以及其结论在离开基准数据后是否仍然成立。
+            </span>
+          </p>
+        </div>
+
+        <div class="quote">
+          <div class="quote-mark">“</div>
+          <p>
+            <span data-lang="en">
+              I am interested in research that connects machine learning methods
+              with medical, biological, or physical structure rather than treating
+              domain data as interchangeable benchmarks.
+            </span>
+            <span data-lang="zh">
+              我更关注能够把机器学习方法与医学、生物或物理结构真正联系起来的研究，
+              而不是把领域数据仅仅视为可以互换的基准测试。
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <h2>
+          <span data-lang="en">Contact</span>
+          <span data-lang="zh">联系方式</span>
+        </h2>
+
+        <p>
+          <span data-lang="en">
+            I welcome academic discussion and research collaboration related to
+            trustworthy medical AI, medical image computing, and AI for Science.
+          </span>
+          <span data-lang="zh">
+            欢迎围绕可信医学人工智能、医学图像计算与科学智能开展学术交流与科研合作。
+          </span>
+        </p>
+      </div>
+
+      <a class="btn primary" href="mailto:202406407@stu.sicau.edu.cn">
+        202406407@stu.sicau.edu.cn
+      </a>
+    </section>
+  </main>
+
+  <footer class="container">
+    <span data-lang="en">© 2026 Yuhaohang He · Last updated June 2026</span>
+    <span data-lang="zh">© 2026 何宇浩航 · 最后更新于 2026 年 6 月</span>
+  </footer>
+
+  <script>
+    const switches = document.querySelectorAll("[data-switch]");
+    const languageNodes = document.querySelectorAll("[data-lang]");
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+      localStorage.setItem("homepage-language", lang);
+
+      languageNodes.forEach((node) => {
+        node.classList.toggle("show", node.dataset.lang === lang);
+      });
+
+      switches.forEach((button) => {
+        button.classList.toggle("active", button.dataset.switch === lang);
+      });
+
+      document.title =
+        lang === "zh"
+          ? "何宇浩航 | 个人学术主页"
+          : "Yuhaohang He | Academic Homepage";
+    }
+
+    switches.forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.switch));
+    });
+
+    const saved = localStorage.getItem("homepage-language");
+    const browserPrefersChinese =
+      navigator.language && navigator.language.toLowerCase().startsWith("zh");
+
+    setLanguage(saved || (browserPrefersChinese ? "zh" : "en"));
+  </script>
+</body>
+</html>
