@@ -3,30 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Yuhaohang He | Academic Homepage</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 24px;
-      font-family: Arial, sans-serif;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Arial, sans-serif;
       line-height: 1.7;
       color: #222;
+      background: #fff;
     }
 
     h1 {
-      margin-bottom: 4px;
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.2;
     }
 
     h2 {
-      margin-top: 40px;
-      border-bottom: 1px solid #ddd;
+      margin-top: 42px;
       padding-bottom: 8px;
+      border-bottom: 1px solid #ddd;
+      font-size: 25px;
+    }
+
+    h3 {
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin: 10px 0;
     }
 
     a {
-      color: #1565c0;
+      color: #1769aa;
       text-decoration: none;
     }
 
@@ -34,93 +52,250 @@
       text-decoration: underline;
     }
 
+    ul {
+      padding-left: 24px;
+    }
+
     .subtitle {
+      margin-top: 10px;
       color: #555;
       font-size: 18px;
     }
 
+    .links {
+      margin-top: 18px;
+      font-size: 17px;
+    }
+
     .item {
-      margin-bottom: 18px;
+      margin: 20px 0;
+    }
+
+    .title {
+      font-weight: 650;
+    }
+
+    .venue {
+      color: #555;
+    }
+
+    .tag {
+      display: inline-block;
+      margin: 4px 5px 4px 0;
+      padding: 4px 10px;
+      border: 1px solid #ccc;
+      border-radius: 14px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    footer {
+      margin-top: 55px;
+      padding-top: 18px;
+      border-top: 1px solid #ddd;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding-top: 30px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Yuhaohang He</h1>
+  <header>
+    <h1>Yuhaohang He</h1>
 
-  <div class="subtitle">
-    Undergraduate Researcher<br>
-    Sichuan Agricultural University
+    <div class="subtitle">
+      Undergraduate Researcher in Computer Science<br>
+      Sichuan Agricultural University
+    </div>
+
+    <div class="links">
+      <a href="https://scholar.google.com/citations?hl=zh-CN&user=lrENhFgAAAAJ"
+         target="_blank" rel="noopener noreferrer">
+        Google Scholar
+      </a>
+      &nbsp;|&nbsp;
+
+      <a href="mailto:202406407@stu.sicau.edu.cn">
+        Email
+      </a>
+    </div>
+  </header>
+
+  <h2>About Me</h2>
+
+  <p>
+    I am an undergraduate researcher at Sichuan Agricultural University.
+    My primary research interest is trustworthy medical artificial
+    intelligence, with an emphasis on developing reliable, clinically
+    meaningful, and auditable learning methods for medical imaging.
+  </p>
+
+  <p>
+    My current work covers medical image segmentation, synthetic-data
+    quality control, uncertainty estimation and calibration,
+    out-of-distribution generalization, and multimodal medical report
+    generation. I am also interested in AI for Science and embodied
+    intelligence.
+  </p>
+
+  <div>
+    <span class="tag">Trustworthy Medical AI</span>
+    <span class="tag">Medical Image Computing</span>
+    <span class="tag">Uncertainty Calibration</span>
+    <span class="tag">Synthetic Data</span>
+    <span class="tag">Multimodal Learning</span>
+    <span class="tag">AI for Science</span>
   </div>
-
-  <p>
-    I am an undergraduate researcher interested in reliable medical
-    image analysis, synthetic data quality control, uncertainty
-    calibration, medical image segmentation, and multimodal medical
-    report generation.
-  </p>
-
-  <p>
-    <a href="你的Google Scholar链接">Google Scholar</a> |
-    <a href="你的ORCID链接">ORCID</a> |
-    <a href="你的GitHub链接">GitHub</a> |
-    <a href="mailto:你的学校邮箱">Email</a>
-  </p>
 
   <h2>Research Interests</h2>
 
   <ul>
-    <li>Reliable Medical Image Analysis</li>
-    <li>Synthetic Data Quality Control</li>
-    <li>Uncertainty Estimation and Calibration</li>
-    <li>Medical Image Segmentation</li>
-    <li>Multimodal Medical Report Generation</li>
+    <li>
+      <strong>Trustworthy Medical Image Analysis</strong>:
+      reliability, uncertainty estimation, calibration, robustness,
+      and out-of-distribution evaluation.
+    </li>
+
+    <li>
+      <strong>Synthetic Medical Data and Quality Control</strong>:
+      clinically constrained generation, validation-locked evaluation,
+      data leakage auditing, and safe data augmentation.
+    </li>
+
+    <li>
+      <strong>Medical Image Segmentation</strong>:
+      small-sample learning, annotation-efficient learning,
+      boundary modelling, and cross-domain generalization.
+    </li>
+
+    <li>
+      <strong>Multimodal Medical Intelligence</strong>:
+      medical visual question answering, image-text learning,
+      and medical report generation.
+    </li>
+
+    <li>
+      <strong>AI for Science and Embodied Intelligence</strong>:
+      biological data modelling, scientific foundation models,
+      multimodal perception, and reliable robotic interaction.
+    </li>
   </ul>
 
   <h2>Selected Publications</h2>
 
   <div class="item">
-    <strong>
+    <div class="title">
       Validation-Locked Quality Control for Synthetic Augmentation
-      in Small-Sample 3D CT Lesion Segmentation
-    </strong><br>
-    Yuhaohang He, Yujie Yao, Yaoxue Xu, Qinzhi Li<br>
-    SSRN Electronic Journal, 2026
+      in Small-Sample 3D CT Lesion Segmentation:
+      A Lesion-Level Paired Audit Study
+    </div>
+
+    <div>
+      <strong>Yuhaohang He</strong>, Yujie Yao,
+      Yaoxue Xu, Qinzhi Li
+    </div>
+
+    <div class="venue">
+      SSRN Electronic Journal, 2026
+    </div>
   </div>
 
   <div class="item">
-    <strong>
+    <div class="title">
       Scene Graph-Guided Uncertainty Decomposition Improves
       Confidence Calibration in Surgical Visual Question Answering
-    </strong><br>
-    Frontiers in Medicine, 2026
+    </div>
+
+    <div>
+      Jing Song, Yujie Xu, et al., <strong>Yuhaohang He</strong>, et al.
+    </div>
+
+    <div class="venue">
+      Frontiers in Medicine, 2026
+    </div>
   </div>
+
+  <div class="item">
+    <div class="title">
+      RABC-Net: Reliability-Aware Annotation-Free Skin Lesion
+      Segmentation for Low-Resource Dermoscopy
+    </div>
+
+    <div>
+      Yujie Yao, <strong>Yuhaohang He</strong>, et al.
+    </div>
+
+    <div class="venue">
+      arXiv preprint, 2026
+    </div>
+  </div>
+
+  <p>
+    See my complete and updated publication list on
+    <a href="https://scholar.google.com/citations?hl=zh-CN&user=lrENhFgAAAAJ"
+       target="_blank" rel="noopener noreferrer">
+      Google Scholar
+    </a>.
+  </p>
 
   <h2>Patents</h2>
 
   <div class="item">
-    <strong>
+    <div class="title">
       基于多源数据的多模态融合处理方法、病例报告生成方法及系统
-    </strong><br>
-    First Inventor: Yuhaohang He<br>
-    Chinese Invention Patent, CN121839160B, 2026
+    </div>
+
+    <div>
+      <strong>第一发明人：何宇浩航</strong>
+    </div>
+
+    <div class="venue">
+      中国授权发明专利，CN121839160B，2026
+    </div>
   </div>
 
   <h2>Research Experience</h2>
 
   <p>
-    My current work focuses on reliable and clinically meaningful
-    artificial intelligence methods for medical imaging, including
-    CT analysis, medical image segmentation, uncertainty estimation,
-    and multimodal report generation.
+    My research experience includes problem formulation, method design,
+    model implementation, experimental evaluation, statistical auditing,
+    manuscript preparation, and research collaboration.
+  </p>
+
+  <p>
+    I am particularly interested in research that goes beyond benchmark
+    performance and investigates whether a model is reliable,
+    reproducible, clinically meaningful, and safe under distribution
+    shifts.
   </p>
 
   <h2>Contact</h2>
 
   <p>
-    Email: 你的学校邮箱
+    Sichuan Agricultural University
   </p>
+
+  <p>
+    Email:
+    <a href="mailto:202406407@stu.sicau.edu.cn">
+      202406407@stu.sicau.edu.cn
+    </a>
+  </p>
+
+  <footer>
+    © 2026 Yuhaohang He · Last updated June 2026
+  </footer>
 
 </body>
 </html>
